@@ -33,6 +33,7 @@ begin
   oven.bake("Pepperoni Pizza")
 rescue OvenIsOffError => e
   puts e.message
+  puts e.backtrace
   puts "I'll turn the oven on and try again"
   oven.turn_on
   retry
